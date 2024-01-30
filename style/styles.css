@@ -254,12 +254,6 @@ section {
     color: var(--color-nav-background)
 }
 
-.project a img{
-    display: block;
-    width: 1em;
-    height: 1em;
-}
-
 @media only screen and (max-width: 66em) {
     .project img, .project video{
         width: 45%;
@@ -353,3 +347,21 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+#contact a{
+    color: var(--color-text);
+}
+
+#contact p {
+    display: flex;
+    width: 100%;
+}
+
+#contact strong {
+    margin-right: 0.5em;
+}
+
+@media only screen and (max-width: 44em) {
+footer p{
+    font-size: 2vw;
+}}
