@@ -160,6 +160,7 @@ section {
 }
 
 .project img, .project video{
+    height: 100%;
     width: 30em;
     border-radius: 5px;
 }
