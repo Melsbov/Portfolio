@@ -162,6 +162,7 @@ section {
 .project img, .project video{
     height: 100%;
     width: 30em;
+    height: 270px;
     border-radius: 5px;
 }
 
