@@ -239,9 +239,13 @@ section {
     /* height: 10em; */
 }
 
-#over p, #Skinprojects p, #UIUXprojects p, #contact p {
+#over p, #Skinprojects p, #UIUXprojects p{
     margin-bottom: 0.3em;
     width: 40em;
+}
+
+#contact p {
+    margin-bottom: 0.3em;  
 }
 
 #over h2, #Skinprojects h2, #UIUXprojects h2, #contact h2 {
@@ -362,31 +366,33 @@ section {
 
 #contact {
     margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
 }
 
 /* #contact ul{
     list-style-type: decimal;
 } */
 
-.custom-list {
+.contactlinks {
     list-style-type: none;
-    padding-left: 0px; /* Adjust the padding to your preference */
+    padding-left: 0px; 
 }
 
-.custom-list li{
+.contactlinks li{
     flex-direction: row;
     align-items: center;
     display: flex;
 }
 
-.custom-list li p{
+.contactlinks li p{
     font-size: 1.5em;
     position: relative;
     left: -10px;
     z-index: 2;
 }
 
-.custom-list div {
+.contactlinks div {
     z-index: 1;
     position: relative;
     left: 0px;
