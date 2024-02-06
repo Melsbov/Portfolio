@@ -33,7 +33,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background:  
@@ -239,10 +239,26 @@ section {
     /* height: 10em; */
 }
 
-#over p, #Skinprojects p, #UIUXprojects p{
+#over p {
     margin-bottom: 0.3em;
     width: 40em;
 }
+
+#over div{
+    display: flex;
+    align-items: center;
+}
+
+#over img {
+    width: 15vw;
+    margin-left: 1em;
+}
+
+#Skinprojects p, #UIUXprojects p{
+    margin-bottom: 0.3em;
+    width: 90%;
+}
+
 
 #contact p {
     margin-bottom: 0.3em;  
@@ -269,10 +285,15 @@ section {
     flex-direction: column;
 }
 
+#Skinprojects .project:nth-of-type(1), #UIUXprojects .project:nth-of-type(1){
+    margin-bottom: 3em;
+}
+
 .project{
     display: flex;
     align-items: center;
 }
+
 
 .project>div:nth-of-type(2){
     display: flex;
@@ -284,6 +305,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 1em;
 }
 
 .project img, .project video{
@@ -322,9 +344,34 @@ section {
     }
 } */
 
+
+@media only screen and (max-width: 105em) {
+
+    .project{
+        display: block;
+    }
+
+    .project div>img, .project div>video{
+        margin-bottom: 1em;
+    }
+
+    .project img, .project video{
+        margin-right: 1em;
+    }
+
+    #over p, #Skinprojects p, #UIUXprojects p{
+        width: 40em;
+    }
+
+}
+
 @media only screen and (max-width: 60em) {
     #over p, #Skinprojects p, #UIUXprojects p, #contact p {
         width: 100%;
+    }
+
+    #over img{
+        width: 30%;
     }
 
     .project{
@@ -341,22 +388,12 @@ section {
 
     .project a {
         width: 70vw;}
+
+    
+    #over p, #Skinprojects p, #UIUXprojects p{
+        width: 90%;
+    }
 } 
-
-@media only screen and (max-width: 105em) {
-
-    .project{
-        display: block;
-    }
-
-    .project div>img, .project div>video{
-        margin-bottom: 1em;
-    }
-
-    .project img, .project video{
-        margin-right: 1em;
-    }
-}
 
 /* @media only screen and (min-width: 105em) {
     .project img, .project video{
