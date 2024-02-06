@@ -280,7 +280,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
 }
 
 .project img, .project video{
