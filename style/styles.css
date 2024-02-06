@@ -1,7 +1,8 @@
 :root {
-	--color-text:#fff;
-    --color-background: #201531;
-    --color-nav-background: #100620;
+    /* --color-background:#ebebeb; */
+    --color-text:#ffffff;
+    --color-nav-background: #201531;
+    --color-background: #100620;
     --color-accent-red1: #B42B3F;
     --color-accent-red2: #E42F45;
     --color-accent-blue1: #839CEE;
@@ -11,13 +12,13 @@
 *{
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
 }
 
 h1{
     z-index: 2;
     position: relative;
-    margin-left: 100px;
+    margin-left: 15vw;
     display: block;
     font-size: 8vw;
     letter-spacing: 10px;
@@ -28,35 +29,68 @@ p {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-background);
+    background:  
+
+    /* Blue upper diagonal line */
+    linear-gradient(80deg, rgba(0,255,0,0) 69.5%, rgba(0, 0, 0, 0.3) 69.9%, var(--color-accent-blue2)70%, var(--color-accent-blue2)75%, 
+    var(--color-accent-blue1)75%, var(--color-accent-blue1)80%, rgba(0, 0, 0, 0.3) 80.1%, rgba(0,255,0,0) 80.5%),
+
+    /* Blue lower diagonal line */
+    linear-gradient(60deg, rgba(0,255,0,0) 19.5%, rgba(0, 0, 0, 0.3) 19.9%, var(--color-accent-blue2)20%, var(--color-accent-blue2)25%, 
+    var(--color-accent-blue1)25%, var(--color-accent-blue1)30%, rgba(0, 0, 0, 0.3) 30.1%, rgba(0,255,0,0) 30.5%),
+    
+    /* Red vertical line */
+    linear-gradient(90deg, var(--color-background)12.5%, rgba(0, 0, 0, 0.3) 13%, var(--color-accent-red2)13%, var(--color-accent-red2) 17%, 
+    var(--color-accent-red1)17%, var(--color-accent-red1) 21%, rgba(0, 0, 0, 0.3) 21%, var(--color-background)21%),
+    
+    /* Background */
+    linear-gradient(var(--color-background)45%, var(--color-background)55%);
+
     color: var(--color-text);
-    /* overflow-x: hidden; */
+    
 }
 
 header {
-    background-image: linear-gradient(var(--color-accent-red2)45%, var(--color-accent-red1)55%);
+    background:  
+    /* Blue Line Left */
+    linear-gradient(145deg, rgba(0,255,0,0) 19.5%, rgba(0, 0, 0, 0.3) 19.9%, var(--color-accent-blue2)20%, var(--color-accent-blue2)27%, 
+    var(--color-accent-blue1)27%, var(--color-accent-blue1)34%, rgba(0, 0, 0, 0.3) 34.1%, rgba(0,255,0,0) 34.5%),
+
+    /* Blue Line Right */
+    linear-gradient(250deg, rgba(0,255,0,0) 19.5%, rgba(0, 0, 0, 0.3) 19.9%, var(--color-accent-blue2)20%, var(--color-accent-blue2)25%, 
+    var(--color-accent-blue1)25%, var(--color-accent-blue1)30%, rgba(0, 0, 0, 0.3) 30.1%, rgba(0,255,0,0) 30.5%),
+
+    /* Red background */
+    linear-gradient(var(--color-accent-red2)45%, var(--color-accent-red1)55%);
+
+
+
+    /* background-image: linear-gradient(var(--color-accent-red2)45%, var(--color-accent-red1)55%); */
     color: var(--color-text);
     display: flex;
     text-align: center;
     align-items: end;
     flex-direction: row;
-    /* overflow: hidden;    */
+    width: 100%;
 }
 
 header p {
     padding-bottom: 2vw;
     z-index: 2; 
-    /* overflow: hidden; */
 }
 
-@media only screen and (max-width: 58em) {
+/* @media only screen and (max-width: 58em) {
     header p {
         font-size: 0.75em;
     }
-}
+} */
 
 header{
     overflow: hidden;
@@ -78,6 +112,7 @@ header>div{
     width: 100%;
     height: 75px;
     background-image: linear-gradient(var(--color-accent-blue2)45%, var(--color-accent-blue1)55%);
+    display: none;
 }
 
 #div2 {
@@ -90,37 +125,40 @@ header>div{
     height: 75px;
     background-image: linear-gradient(var(--color-accent-blue2)45%, var(--color-accent-blue1)55%);
     overflow-x: hidden;
+    display: none;
 }
 
 nav {
-    background-color: var(--color-nav-background);
-    /* height: 3.6em; */
+    background: linear-gradient(45deg, #2a1d3def 50%, #0b0318ef 100%);
+    height: 3em;
     overflow: visible;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    width: 80vw;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
-*{
-    scroll-behavior: smooth;
-}
+/* nav:has(ul:hover) li:nth-of-type(2){
+    background-color: aqua;
+} */
 
 nav ul {
     position: relative;
-    
     left: 10px;
     list-style-type:none;
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
     overflow: visible;
 }
 
 nav li {
     float: left;
     overflow: visible;
-
+    /* margin: 20px; */
 }
 
 nav a {
@@ -128,26 +166,28 @@ nav a {
     display: block;
     color: var(--color-text);
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px;
     text-decoration: none;
     border-radius: 5px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
-nav li:nth-of-type(2) a:hover, nav li:nth-of-type(4) a:hover {
+nav li:nth-of-type(even) a:hover {
     z-index: 5;
     rotate: 5deg;
     background-image: linear-gradient(var(--color-accent-blue2)45%, var(--color-accent-blue1)55%);
     color: var(--color-nav-background)
 }
 
-nav li:nth-of-type(1) a:hover, nav li:nth-of-type(3) a:hover {
+nav li:nth-of-type(odd) a:hover {
     z-index: 5;
     rotate: -5deg;
     background-image: linear-gradient(var(--color-accent-blue2)45%, var(--color-accent-blue1)55%);
     color: var(--color-nav-background)
 }
 
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 60em) {
     h1{
         font-size: 10vw;
         z-index: 2;
@@ -158,11 +198,11 @@ nav li:nth-of-type(1) a:hover, nav li:nth-of-type(3) a:hover {
         z-index: 2;  
     }
 
-    header>div{
+    /* header>div{
         height:auto
-    }
+    } */
 
-    #div1 {
+    /* #div1 {
         z-index: 1;
         position: relative;
         left: -600px;
@@ -171,9 +211,9 @@ nav li:nth-of-type(1) a:hover, nav li:nth-of-type(3) a:hover {
         width: 100em;
         height: 7vw;
         background-image: linear-gradient(var(--color-accent-blue2)45%, var(--color-accent-blue1)55%);
-    }
+    } */
     
-    #div2 {
+    /* #div2 {
         z-index: 1;
         position: relative;
         left: -600px;
@@ -183,7 +223,7 @@ nav li:nth-of-type(1) a:hover, nav li:nth-of-type(3) a:hover {
         height: 7vw;
         background-image: linear-gradient(var(--color-accent-blue2)45%, var(--color-accent-blue1)55%);
         overflow-x: hidden;
-    }
+    } */
 
     nav a {
         font-size: 3vw;}
@@ -208,10 +248,21 @@ section {
     margin-bottom: 0.5em;
 }
 
-#over, #Skinprojects, #UIUXprojects, #contact {
-    background-color: var(--color-nav-background);
+
+#over, #Skinprojects, #UIUXprojects, #contact {  
+    /* background:  
+    linear-gradient(60deg, rgba(0,255,0,0) 19.5%, rgba(0, 0, 0, 0.3) 19.9%, var(--color-accent-blue2)20%, var(--color-accent-blue2)25%, 
+    var(--color-accent-blue1)25%, var(--color-accent-blue1)30%, rgba(0, 0, 0, 0.3) 30.1%, rgba(0,255,0,0) 30.5%),
+
+    linear-gradient(90deg, var(--color-nav-background)2.5%, rgba(0, 0, 0, 0.3) 3%, var(--color-accent-red2)3%, var(--color-accent-red2) 6%, 
+    var(--color-accent-red1)6%, var(--color-accent-red1) 9%, rgba(0, 0, 0, 0.3) 9%, var(--color-nav-background)9.5%, var(--color-nav-background)100%, rgba(255,0,0,0) 100%); */
+    background: linear-gradient(45deg, #2a1d3def 50%, #0b0318ef 100%);
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 80vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .project{
@@ -222,12 +273,20 @@ section {
 .project>div:nth-of-type(2){
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.project>div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
 }
 
 .project img, .project video{
     height: 100%;
-    width: 30em;
-    border-radius: 5px;
+    width: 22em;
+    border-radius: 10px;
 }
 
 .project a {
@@ -254,13 +313,13 @@ section {
     color: var(--color-nav-background)
 }
 
-@media only screen and (max-width: 66em) {
+/* @media only screen and (max-width: 66em) {
     .project img, .project video{
-        width: 45%;
+        max-width: 45%;
     }
-}
+} */
 
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 60em) {
     #over p, #Skinprojects p, #UIUXprojects p, #contact p {
         width: 100%;
     }
@@ -279,7 +338,7 @@ section {
 
     .project a {
         width: 70vw;}
-}
+} 
 
 @media only screen and (max-width: 105em) {
 
@@ -296,11 +355,11 @@ section {
     }
 }
 
-@media only screen and (min-width: 105em) {
+/* @media only screen and (min-width: 105em) {
     .project img, .project video{
         margin-left: 1em;
     }
-}
+}  */
 
 #contact {
     margin-bottom: 3em;
@@ -339,9 +398,14 @@ section {
 
 footer {
     z-index: 3;
-    background-image: linear-gradient(var(--color-accent-red2)45%, var(--color-accent-red1)55%);
-    color: var(--color-text);
-        text-align: center;
+    background:
+    /* Blue Line Right */
+    linear-gradient(90deg, rgba(0,255,0,0) 19.5%, rgba(0, 0, 0, 0.3) 19.9%, var(--color-accent-blue2)20%, var(--color-accent-blue2)25%, 
+    var(--color-accent-blue1)25%, var(--color-accent-blue1)30%, rgba(0, 0, 0, 0.3) 30.1%, rgba(0,255,0,0) 30.5%),
+
+    /* Red background */
+    linear-gradient(var(--color-accent-red2)45%, var(--color-accent-red1)55%);    color: var(--color-text);
+    text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
@@ -361,7 +425,7 @@ footer {
     margin-right: 0.5em;
 }
 
-@media only screen and (max-width: 44em) {
+@media only screen and (max-width: 48em) {
 footer p{
     font-size: 2vw;
 }}
