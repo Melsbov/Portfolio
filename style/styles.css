@@ -415,8 +415,9 @@ footer {
     color: var(--color-text);
 }
 
-#contact p {
+#contact>p {
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 
