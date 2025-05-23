@@ -1,0 +1,585 @@
+:root {
+    --Tan: #F5EEDD;
+    --Darkblue: #06202B;
+    --Midblue: #077A7D;
+    --Lightblue: #7AE2CF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--Tan);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 7em;
+    font-weight: 500;
+    color: var(--Darkblue)
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 200;
+    color: var(--Darkblue);
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--Darkblue);
+    margin: 0em;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--Tan);
+}
+
+p{
+    font-size: 1.5em;
+    font-weight: 200;
+    color: var(--Darkblue);
+}
+
+p a{
+    background-color: var(--Midblue);
+    color: var(--Darkblue);
+    padding: 0em 0.5em 0.2em 0.5em;
+    border-radius: 10em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+p a:hover{
+    background-color: var(--Darkblue);
+    color: var(--Midblue);
+    padding: 0em 0.5em 0.2em 0.5em;
+    border-radius: 10em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between the divs */
+    align-items: center; /* Align items vertically */
+    padding-top: 10em;
+    position: relative; /* Ensure header is positioned above other elements */
+    z-index: 2; /* Higher than the main's background */
+}
+
+header div {
+    flex: 1; /* Optional: Make both divs take equal width */
+}
+
+header div:first-child {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Optional: Add spacing between the PNG and SVG */
+    position: relative; /* Set the parent container to relative positioning */
+}
+
+header div:nth-child(2) {
+    display: flex;
+    flex-direction: column; /* Stack the h1 and h2 vertically */
+    justify-content: center; /* Center them vertically */
+    align-items: center; /* Center them horizontally */
+    text-align: center; /* Optional: Center the text */
+    height: 100%; /* Ensure the div takes full height of the header */
+}
+
+.profile-pic {
+    position: absolute; /* Position the PNG image absolutely */
+    top: -10vw; /* Align it to the top of the parent container */
+    left: 20vw; /* Align it to the left of the parent container */
+    z-index: 2; /* Ensure it appears above the SVG */
+    max-width: 20vw; /* Adjust the size of the profile picture */
+    height: auto;
+}
+
+.design-element {
+    position: absolute; /* Position the SVG absolutely */
+    top: 0; /* Align it to the top of the parent container */
+    left: 0; /* Align it to the left of the parent container */
+    z-index: 1; /* Ensure it appears below the PNG */
+    max-width: 100%; /* Adjust the size of the design element */
+    height: auto;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    pointer-events: none;
+}
+
+main {
+    position: relative; /* Ensure main is the positioning context */
+    z-index: 0; /* Keep main content above the background */
+    width: 100vw; /* Make the main container span the full width of the viewport */
+    overflow: visible; /* Ensure content is not clipped */
+    height: auto; /* Allow height to adjust based on content */
+}
+
+.background-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.content-container {
+    margin-top: 20em;
+    top: 5em;
+    display: flex; /* Use flexbox to align the two divs side by side */
+    width: 100%; /* Make the container span the full width */
+    height: auto; /* Allow height to adjust based on content */
+    position: relative; /* Ensure it stays above the background */
+    z-index: 1; /* Place it above the background */
+    margin-bottom: 30em; 
+}
+
+.content-container p {
+    margin: 0em 0em 1em 0em;
+    max-width: 40em;
+    font-size: 1.2em;
+}
+
+.left-content, .right-content {
+    width: 50%; /* Each div takes up 50% of the width */
+    color: var(--Darkblue); /* Ensure text is visible */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+
+.left-content h3{
+    background-color: var(--Tan);
+    padding: 1em;
+    margin: 1em 0em 1em 0em;
+    border-radius: 0em 10em 10em 0em;
+}
+
+.left-content h3 a{
+    text-decoration: none;
+    color: var(--Darkblue);
+}
+
+.left-content h3:hover{
+    background-color: var(--Darkblue);
+}
+
+.left-content h3:hover a{
+    color: var(--Tan);
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align content to the left */
+    padding: 0em 2em 0em 0em;
+}
+
+.right-content h3, .right-content p {
+    color: var(--Tan);
+}
+
+.projecten {
+    position: relative; /* Ensure it is positioned above the background */
+    z-index: 1; /* Place it above the background */
+    color: var(--Darkblue); /* Ensure text is visible */
+}
+
+.projecten-title{
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+
+.project-item {
+    display: flex; /* Use flexbox to align the child divs horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: left; /* Distribute space evenly */
+    background-color: var(--Tan); /* Add a background color */
+    margin-bottom: 5em;
+}
+
+.project-item p{
+    font-size: 1.2em;
+    font-weight: 200;
+    color: var(--Tan);
+}
+
+.project-item h3 {
+    color: var(--Tan);
+}
+
+.projecten-container-cmd .project-item .project-image img{
+    height: 25em;
+    object-fit: contain;
+}
+
+.projecten-container-cmd .project-item .project-lightblue {
+    background-color: var(--Lightblue); /* Change the background color for the second project */
+    width: 5em;
+
+}
+.projecten-container-cmd .project-item .project-midblue {
+    background-color: var(--Midblue); /* Change the background color for the second project */
+    width: 5em;
+
+}
+.projecten-container-cmd .project-item .project-number {
+    background-color: var(--Darkblue); /* Change the background color for the second project */
+    width: 100%;
+}
+
+.projecten-container-cmd .project-item>div{
+    height: 25em;
+}
+
+.project-number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-number div{
+    padding: 0em 1em 0em 1em;
+    /* margin: 2em; */
+    max-width: 40em;
+}
+
+.project-number p{
+    margin-bottom: 0.8em;
+}
+
+.giant-screen {
+    display: block;
+}
+
+.large-screen {
+    display: none;
+}
+
+.medium-screen {
+    display: none;
+}
+
+.small-screen {
+    display: none;
+}
+
+/* Default styles (for larger screens) are already defined above */
+
+@media screen and (max-width: 1440px){
+    .giant-screen {
+        display: none;
+    }
+    
+    .large-screen {
+        display: block;
+        top: -10em;
+    }
+
+    .left-content h3 {
+        font-size: 1.5em;
+        background-color: var(--Tan);
+        padding: 0.6em 1.2em 0.6em 1.2em;
+        margin: 0.8em 0em 0.8em 0em;
+    }
+
+    .projecten-container-cmd .project-item .project-image img{
+        height: 18em;
+    }
+
+    .projecten-container-cmd .project-item>div{
+        height: 18em;
+    }
+
+    .project-item p{
+        font-size: 1em;
+    }
+
+}
+
+/* Styles for smaller laptop screens (e.g., max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        /* flex-direction: column; Stack header content vertically */
+        align-items: center; /* Center align items */
+        padding-top: 5em;
+    }
+
+    .profile-pic {
+        max-width: 25vw; 
+    }
+
+    .content-container {
+        flex-direction: column; /* Stack left and right content vertically */
+        margin-top: 10em;
+    }
+
+    .giant-screen {
+        display: none;
+    }
+    
+    .large-screen {
+        display: block;
+        top: -2em;
+    }
+
+    .medium-screen {
+        display: none; 
+    }
+
+    .content-container{
+        flex-direction: column-reverse;
+    }
+
+    .left-content, .right-content {
+        width: 100%; /* Make each section take full width */
+        text-align: center; /* Center-align text */
+        align-items: center;
+    }
+
+    .right-content{
+        padding: 0em 2em 0em 2em;
+    }
+
+    .left-content{
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .left-content h3 {
+        font-size: 1.5em;
+        background-color: var(--Tan);
+        padding: 0.3em 0.8em 0.3em 0.8em;
+        margin: 0.5em 0em 0.5em 0em;
+        border-radius: 10em;
+    }
+
+    p{
+        font-size: 1em;
+    }
+
+}
+
+
+/* Styles for phone screens (e.g., max-width: 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.9em; /* Reduce font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 4em; /* Reduce heading size */
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .profile-pic {
+        position: absolute; 
+        top: -15vw; 
+        left: 15vw; 
+        z-index: 2; 
+        max-width: 30vw; 
+        height: auto;
+    }
+
+    .giant-screen {
+        display: none;
+    }
+    
+    .large-screen {
+        display: none;
+    }
+
+    .medium-screen {
+        display: none; 
+    }
+
+    .small-screen {
+        display: block; 
+    }
+
+    .content-container {
+        top: 10em;
+        margin-top: 5em;
+        margin-bottom: 25em;
+    }
+
+    .left-content{
+        flex-direction: column;
+        gap: unset;
+    }
+
+
+    .project-item {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0em;
+    }
+
+    .projecten-container-cmd .project-item .project-image{
+        height: unset;
+    }
+
+    .projecten-container-cmd .project-item .project-image img{
+        width: 100%;
+        height: unset;
+        object-fit: contain;
+    }
+    .projecten-container-cmd .project-item>div:not(.project-number, .project-image){
+        width: 100%;
+        height: 1em;
+    }
+
+    .project-item div {
+        width: 100%; /* Make child divs take full width */
+    }
+
+
+    .project-number div {
+        /* margin: 1em; */
+    }
+
+    .project-number p {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+/* Default: Show the default tree image */
+.default-tree {
+    display: block;
+}
+
+.small-tree, .wide-tree {
+    display: none;
+}
+
+/* For screens below 1024px: Show Treesmall and hide others */
+@media screen and (max-width: 1024px) {
+    .default-tree {
+        display: none;
+    }
+
+    .small-tree {
+        display: block;
+    }
+
+    .wide-tree {
+        display: none;
+    }
+}
+
+/* For screens below 768px: Show Widetree and hide others */
+@media screen and (max-width: 768px) {
+    .default-tree, .small-tree {
+        display: none;
+    }
+
+    .wide-tree {
+        display: block;
+    }
+}
+
+.contact {
+    position: relative;
+    background-color: var(--Darkblue); /* Match the style with your design */
+    color: var(--Tan); /* Text color for contrast */
+    padding: 5em 2em; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+}
+
+.contact-title {
+    margin-bottom: 2em;
+}
+
+.contact-title h2 {
+    font-size: 3em;
+    font-weight: 500;
+    color: var(--Tan);
+}
+
+.contact-title p {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: var(--Lightblue);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    gap: 2em; /* Add spacing between items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contact-item {
+    background-color: var(--Midblue); /* Use a mid-tone background for items */
+    padding: 2em;
+    flex: 1 1 300px; /* Make items responsive */
+    max-width: 300px; /* Limit the width of each item */
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: var(--Tan);
+    margin-bottom: 1em;
+}
+
+.contact-item p {
+    font-size: 1.2em;
+    font-weight: 200;
+    color: var(--Tan);
+}
+
+.contact-item a {
+    color: var(--Lightblue); /* Make links stand out */
+    text-decoration: none;
+}
+
+.contact-container a{
+    text-decoration: none;
+}
+
+.contact-container .contact-item:hover{
+    background-color: var(--Darkblue); /* Change background on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1.5em; /* Adjust spacing */
+    }
+
+    .contact-item {
+        max-width: 100%; /* Allow items to take full width */
+        flex: unset; /* Reset flex properties */
+
+    }
+}
+
